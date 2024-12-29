@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vh;
+  background-image: linear-gradient(220deg, yellow, green);
+}
+
+.chimney {
+  background-color: black;
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  top: 230px;
+  left: 310px;
+}
+
+.triangle {
+  position: absolute;
+  top: 160px;
+  left: 300px;
+  height: 0px;
+  width: 0px;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 150px solid #63c8f3;
+}
+.triangle::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust for border width */
+  left: -160px; /* Match triangle width + border */
+  border-left: 160px solid transparent; /* Extend border */
+  border-right: 160px solid transparent;
+  border-bottom: 160px solid black; /* Border color */
+  z-index: -1;
+}
+.holw {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5); /* Transparent white */
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: 2px solid black;
+  position: absolute;
+  top: 60px;
+  right: -20px;
+}
+
+.square {
+  position: absolute;
+  left: 302px;
+  top: 308px;
+  height: 200px;
+  width: 295px;
+  background-color: #63c8f3;
+  border-bottom: 3px solid black;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+.window {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  height: 75px;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.5); /* Transparent white */
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px); /* Glass blur effect */
+  border: 2px solid black;
+}
+
+.door {
+  position: absolute;
+  right: 60px;
+  bottom: 0px;
+  height: 100px;
+  width: 60px;
+  background-color: black;
+}
+
+.door:hover {
+  background-color: white;
+}
+.doorKnob:hover {
+  background-color: white;
+}
+
+.doorKnob {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(124, 227, 221);
+  position: absolute;
+  border-radius: 50%;
+  right: 5px;
+  bottom: 50px;
+}
+.treeStem {
+  height: 50px;
+  width: 20px;
+  background-color: brown;
+  position: absolute;
+  left: 30px;
+}
+.tree-1 {
+  position: absolute;
+  top: 370px;
+  left: 230px;
+}
+.tree-2 {
+  position: absolute;
+  top: 430px;
+  left: 230px;
+}
+.tree-3 {
+  position: absolute;
+  top: 360px;
+  left: 590px;
+}
+.tree-4 {
+  position: absolute;
+  top: 420px;
+  left: 590px;
+}
+
+.tree-leaves {
+  height: 0px;
+  width: 0px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 120px solid green;
+}
+.sun {
+  position: absolute;
+  right: -750px;
+  top: -10px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: orange;
+  box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow,
+    inset 0 0 80px yellow;
+}
